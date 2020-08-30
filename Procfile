@@ -1,1 +1,1 @@
-web: gunicorn myWeb.wsgi --log-file - --bind 0.0.0.0:8000
+web: gunicorn webgame.wsgi
