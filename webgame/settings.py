@@ -129,7 +129,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'img')
 MEDIA_URL = '/img/'
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='myendgame420@gmail.com'
