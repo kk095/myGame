@@ -131,7 +131,7 @@ MEDIA_URL = '/img/'
 
 
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='myendgame420@gmail.com'
+EMAIL_HOST_USER='playourgame936@gmail.com'
 EMAIL_HOST_PASSWORD='Myfakegame420'
 EMAIL_PORT= 587
 EMAIL_USE_TLS= True
