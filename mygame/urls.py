@@ -11,3 +11,5 @@ urlpatterns = [
     path('flip/',views.flip,name='flip'),
     path('menu/',views.menu,name='menu'),
 ]
+
+
