@@ -20,16 +20,24 @@ def contact(request):
         email_from= settings.EMAIL_HOST_USER
         email_to=['playourgame936@gmail.com']
         send_mail(subject, message, email_from, email_to,fail_silently=False,)
-        return  redirect('end-page')
-
-
-
+        return  redirect('menu')
     return render(request,'contact.html')
 
 
-def endpage(request):
+
+def gametwo(request):
+    return render(request,'gametwo.html')
+
+def flip(request):
+     return render(request,'flip.html')
+
+
+def main(request):
     return render(request,'endpage.html')
 
 def message(request):
     messages.info(request,"Please Register Yourself First!")
     return redirect(request.META['HTTP_REFERER'])
+
+def menu(request):
+    return render(request,'menu.html')

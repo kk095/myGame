@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>some issue</title>
-    <style>
-        .text{
-        text-align:center;
-        }
-        #a{color:#FADB34;
-           text-decoration:none;
-           text-align:center;}
-    </style>
+    <link rel="stylesheet" href={% static 'css/end.css' %}>
+    <title>game</title>
+        
+        
 </head>
-<body style="background-color:rgb(121, 22, 212);">
-<h1 class="text">Soory!</h1>
-<h1 class="text">Our service is under maintainace. we are soory for your unconvienent.</h1>
-<h1 class="text">Please try after some days!</h1>
-
-<h1 class="text"><a href="/" id="a"> Click To Home</a> </h1>
-
+<body>
+    <h1>Tic Tac Toe</h1>
+    <h2 id="result"></h2>
+    <div class="boxes">
+    <div class="box up">
+    <a href="#" onClick="fun(this)" id="one" ><div class="check left" id="1" ></div></a>
+    <a href="#" id="two" onClick="fun(this)" ><div class="check "id="2"   ></div></a>
+    <a href="#"onClick="fun(this)" id="three" ><div class="check right"id="3"  ></div></a>
+    </div>
+    <div class="box">
+    <a href="#" id='four' onClick="fun(this)" ><div class="check left"id="4"  ></div></a>
+    <a href="#"onClick="fun(this)" id="five" ><div class="check "id="5"  ></div></a>
+    <a href="#"onClick="fun(this)" id="six" ><div class="check right"id="6"  ></div></a>
+    </div>
+    <div class="box down ">
+    <a href="#"onClick="fun(this)" id="seven" ><div class="check left"id="7"  ></div></a>
+    <a href="#"onClick="fun(this)" id="eight"><div class="check "id="8"  ></div></a>
+    <a href="#"onClick="fun(this)"  id="nine"><div class="check right" id="9" ></div></a>
+    </div>
+    </div>
 </body>
+<script src="{% static 'js/end.js' %}"></script>
+
 </html>
