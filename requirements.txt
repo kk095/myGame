@@ -9,6 +9,7 @@ django-phonenumber-field==4.0.0
 django-storages==1.9.1
 docutils==0.15.2
 gunicorn==20.0.4
+insta-scrape==2.1.2
 jmespath==0.10.0
 kiwisolver==1.2.0
 Pillow==7.1.2
